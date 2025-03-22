@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<style>
+body {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid hsl(280, 100%, 25%);
+}
+
+/* Borrowed from https://haltersweb.github.io/Accessibility/svg.html */
+.screen-reader-text { /* Hide only visually, but have it available for screenreaders */
+  position: absolute !important;
+  display: block;
+  visibility: visible;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0px, 0px, 0px, 0px); /* deprecated */
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  white-space: nowrap; /* wrap uses line feeds but LFs are not recognized as spaces by screen readers */
+}
+
+.menu {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.menu li {
+  list-style: none;
+  text-align: right;
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.menu li {
+  border-bottom: 1px solid white;
+}
+
+.menu a {
+  display: block;
+  font-size: 22pt;
+  font-weight: 300;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.menu a:hover {
+  border-bottom: 1px solid hsl(280, 100%, 25%);
+}
+
+.menu .active {
+  font-weight: 500;
+}
+
+.content {
+  font-weight: 300;
+  font-size: 18pt;
+  padding: 30px;
+  padding: 0 10%;
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: hsl(280, 100%, 25%);
+  color: white;
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.footer a {
+  margin: 5px;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.footer a:hover {
+  color: lightgray;
+}
+
+.footer span {
+  padding-top: 10px;
+  color: lightgray;
+}
+
+/* About specific classes */
+
+@media (max-width: 1200px) {
+
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content {
+    margin-bottom: 40px;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-content {
+    flex-grow: 2;
+    flex-basis: 0;
+    margin-right: 10%;
+  }
+
+  .about-image {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+}
+
+/* Talk specific classes */
+
+.talk {
+  margin-bottom: 40px;
+}
+
+.talk-details {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.talk-event {
+  font-style: italic;
+}
+
+.talk-event-details {
+  color: #555;
+}
+
+/* Talk landing page specific classes */
+
+.talk-page-event {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.talk-page-event-location {
+  color: #555;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.talk-page-event-date {
+  color: #555;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.talk-page-link-anchor {
+  font-size: 1.1em;
+}
+
+.talk-page-link-description {
+  padding-left: 8px;
+}
+
+/* Project specific classes */
+
+.project-title {
+  font-size: 1.2em;
+}
+
+.project-description {
+  margin-left: 20px;
+}
+
+.project-video {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+/* Photography specific classes */
+
+.photo-forward {
+  margin-bottom: 40px;
+}
+
+.photo-container {
+  display: flex;
+  max-width: 1600px;
+}
+
+.photo-container a {
+  border: none;
+}
+
+@media (min-width: 1400px) {
+
+  .photo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .photo-container span {
+    padding-right: 5%;
+    flex-grow: 1;
+  }
+
+}
+
+@media (max-width: 1400px) {
+
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-container span {
+    padding-bottom: 10px;
+    flex-grow: 1;
+  }
+
+  .photo-container a {
+    margin-bottom: 40px;
+  }
+
+  .photo-container img {
+    max-width: 100%;
+  }
+
+}
+</style>
+<title>{{title}}</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="{{title}}" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://nebri.us/static/me-small.jpg" />
+<meta property="og:url" content="https://nebri.us{{path}}" />
+<meta property="og:description" content="{{description}}" />
+<link rel="shortcut icon" href="/favicon.png">
+<meta name="theme-color" content="#550080">
+<meta name="Description" content="{{description}}">
+</head>
+
+<body>
+
+<nav class="menu">
+  <ul>
+    <li><a{{#if index}} class="active"{{/if}} href="/">about</a></li>
+    <li><a{{#if talks}} class="active"{{/if}} href="/talks.html">talks</a></li>
+    <li><a{{#if projects}} class="active"{{/if}} href="/projects.html">projects</a></li>
+    <li><a{{#if photography}} class="active"{{/if}} href="/photography.html">photography</a></li>
+  </ul>
+</nav>

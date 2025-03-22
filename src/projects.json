@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "title": "RVL",
+      "url": "https://github.com/rvl-system",
+      "description": [
+        "A wirelessly distributed lighting control system for programmable LED art.",
+        "RVL is an ecosystem of hardware and software I desgined for building LED art pieces and fun home lighting. Here's a video of an art piece I designed with it at Burning Man 2019"
+      ],
+      "videoEmbed": "<iframe width=\"960\" height=\"540\" src=\"https://www.youtube.com/embed/HZNM6n1g5n8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    }, {
+      "title": "React Strapped",
+      "url": "https://github.com/nebrius/react-strapped",
+      "description": [
+        "A library for working with bootstrap data in multi-page applications with differing bootstrap data",
+        "I created this library after struggling to implement easy-to-use data access mechanisms for bootstrap data that <em>also</em> provided safety mechanisms to prevent accessing data not intended for the current page."
+      ]
+    }, {
+      "title": "Jotai Prototyping",
+      "url": "https://github.com/nebrius/jotai-prototyping",
+      "description": [
+        "A demo to explore using Jotai, Next.js, and my own library React Strapped together in a single application. This demo is written twice: once using Next.js' new App Router paradigm, and again using the older Pages router paradigm.",
+        "I created this library as both a way to learn about React Server Components and to vet/polish my React Strapped library"
+      ]
+    }, {
+      "title": "Reduxology",
+      "url": "https://github.com/nebrius/reduxology",
+      "description": [
+        "A library that makes it easier to manage boilerplate and reason about React Redux applications",
+        "I created this library after watching folks struggle to learn Redux. In my experience, this struggle usually comes from the Redux API obscuring the Redux concepts with unecessary boilerplate."
+      ]
+    }, {
+      "title": "Raspi IO",
+      "url": "https://github.com/nebrius/raspi-io",
+      "description": [
+        "Raspi IO is a Firmata API compatible library for Raspbian running on the Raspberry Pi that can be used as an I/O plugin with Johnny-Five.",
+        "Raspi IO is built on Raspi.js, which I wrote to make it easier to work with hardware on the Raspberry Pi in a consistent way across disparate peripherals."
+      ]
+    }, {
+      "title": "Aquarium Control",
+      "url": "https://github.com/nebrius/aquarium-control",
+      "description": [
+        "A system for controlling the lights, monitoring temperature, and logging cleaning and water testing in my aquarium with a Raspberry Pi.",
+        "This system has a React.js web UI for controlling the lighting, backed by Node.js on the Raspberry Pi."
+      ]
+    }, {
+      "title": "Request Inspector",
+      "url": "https://github.com/nebrius/request-inspector",
+      "description": [
+        "A prototype request timing diagnostic tool for Web and Node.js applications."
+      ]
+    }, {
+      "title": "CommaScript",
+      "url": "https://github.com/nebrius/commascript",
+      "description": [
+        "A statically typed, backwards compatible dialect of JavaScript.",
+        "A very old experiment into how we could get static typing into JavaScript without new syntax. No longer under development since TypeScript came to popularity."
+      ]
+    }, {
+      "title": "Dissertation",
+      "url": "https://github.com/nebrius/dissertation_project",
+      "description": [
+        "The source code for the firmware part of my dissertation project.",
+        "For my dissertation, I created an interconnect protocol based on SPI for creating clusters of DSPs to perform parallel computing using MPI"
+      ]
+    }
+  ]
+}

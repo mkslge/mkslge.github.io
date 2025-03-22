@@ -1,0 +1,26 @@
+{
+  "name": "nebrius.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.mjs",
+    "start": "http-server docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebrius/nebrius.github.io.git"
+  },
+  "author": "Bryan Hughes <bryan@nebri.us>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nebrius/nebrius.github.io/issues"
+  },
+  "homepage": "https://github.com/nebrius/nebrius.github.io#readme",
+  "dependencies": {
+    "cpy": "^11.0.1",
+    "handlebars": "^4.7.7",
+    "http-server": "^14.0.0"
+  }
+}

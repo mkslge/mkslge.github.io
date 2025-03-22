@@ -1,0 +1,81 @@
+<!--
+Copyright (C) 2017 Bryan Hughes <bryan@nebri.us>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+{{> header talks=true path="/talks.html" title="Bryan Hughes' Talks" description="Giving talks and workshops is a thing I'm really into. I blame having teachers for parents and my high school days as a theatre nerd :-P. You can find a mostly complete list of talks I've given on this page" }}
+
+<section class="content">
+  <h1>Hi. I give talks.</h1>
+  <p>
+    Giving talks and workshops is a thing I'm really into. I blame having teachers
+    for parents and my high school days as a theatre nerd :-P. Here's a mostly
+    complete list of talks I've given, but I'm sure I'm missing one or two. If
+    you saw me give a talk or workshop that isn't listed here, let me know!
+  </p>
+  {{#if upcoming}}
+
+  <h3>Upcoming</h3>
+  {{#upcoming}}
+
+  <div class="talk">
+    <div class="talk-title"><a href="/talk/{{slug}}">"{{title}}."</a></div>
+    <div class="talk-details">
+      <span class="talk-event">{{event}}.</span>
+      <span class="talk-event-details">{{location}}. {{month}} {{year}}.</span>
+    </div>
+  </div>
+  {{/upcoming}}
+  {{/if}}
+
+  <h3>Conference Talks</h3>
+  {{#conferences}}
+
+  <div class="talk">
+    <div class="talk-title"><a href="/talk/{{slug}}">"{{title}}."</a></div>
+    <div class="talk-details">
+      <span class="talk-event">{{event}}.</span>
+      <span class="talk-event-details">{{location}}. {{month}} {{year}}.</span>
+    </div>
+  </div>
+  {{/conferences}}
+
+  <h3>Conference Workshops</h3>
+  {{#workshops}}
+
+  <div class="talk">
+    <div class="talk-title"><a href="/talk/{{slug}}">"{{title}}."</a></div>
+    <div class="talk-details">
+      <span class="talk-event">{{event}}.</span>
+      <span class="talk-event-details">{{location}}. {{month}} {{year}}.</span>
+    </div>
+  </div>
+  {{/workshops}}
+
+  <h3>Meetup Talks</h3>
+  {{#meetups}}
+
+  <div class="talk">
+    <div class="talk-title"><a href="/talk/{{slug}}">"{{title}}."</a></div>
+    <div class="talk-details">
+      <span class="talk-event">{{event}}.</span>
+      <span class="talk-event-details">{{location}}. {{month}} {{year}}.</span>
+    </div>
+  </div>
+  {{/meetups}}
+
+</section>
+
+{{> footer }}

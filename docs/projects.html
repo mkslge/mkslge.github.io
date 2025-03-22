@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<style>
+body {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid hsl(0, 72%, 42%);
+}
+
+/* Borrowed from https://haltersweb.github.io/Accessibility/svg.html */
+.screen-reader-text { /* Hide only visually, but have it available for screenreaders */
+  position: absolute !important;
+  display: block;
+  visibility: visible;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0px, 0px, 0px, 0px); /* deprecated */
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  white-space: nowrap; /* wrap uses line feeds but LFs are not recognized as spaces by screen readers */
+}
+
+.menu {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.menu li {
+  list-style: none;
+  text-align: right;
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.menu li {
+  border-bottom: 1px solid white;
+}
+
+.menu a {
+  display: block;
+  font-size: 22pt;
+  font-weight: 300;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.menu a:hover {
+  border-bottom: 1px solid hsl(0, 72%, 42%);
+}
+
+.menu .active {
+  font-weight: 500;
+}
+
+.content {
+  font-weight: 300;
+  font-size: 18pt;
+  padding: 30px;
+  padding: 0 10%;
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: hsl(0, 72%, 42%);
+  color: white;
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.footer a {
+  margin: 5px;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.footer a:hover {
+  color: lightgray;
+}
+
+.footer span {
+  padding-top: 10px;
+  color: lightgray;
+}
+
+/* About specific classes */
+
+@media (max-width: 1200px) {
+
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content {
+    margin-bottom: 40px;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-content {
+    flex-grow: 2;
+    flex-basis: 0;
+    margin-right: 10%;
+  }
+
+  .about-image {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+}
+
+/* Talk specific classes */
+
+.talk {
+  margin-bottom: 40px;
+}
+
+.talk-details {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.talk-event {
+  font-style: italic;
+}
+
+.talk-event-details {
+  color: #555;
+}
+
+/* Talk landing page specific classes */
+
+.talk-page-event {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.talk-page-event-location {
+  color: #555;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.talk-page-event-date {
+  color: #555;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.talk-page-link-anchor {
+  font-size: 1.1em;
+}
+
+.talk-page-link-description {
+  padding-left: 8px;
+}
+
+/* Project specific classes */
+
+.project-title {
+  font-size: 1.2em;
+}
+
+.project-description {
+  margin-left: 20px;
+}
+
+.project-video {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+/* Photography specific classes */
+
+.photo-forward {
+  margin-bottom: 40px;
+}
+
+.photo-container {
+  display: flex;
+  max-width: 1600px;
+}
+
+.photo-container a {
+  border: none;
+}
+
+@media (min-width: 1400px) {
+
+  .photo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .photo-container span {
+    padding-right: 5%;
+    flex-grow: 1;
+  }
+
+}
+
+@media (max-width: 1400px) {
+
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-container span {
+    padding-bottom: 10px;
+    flex-grow: 1;
+  }
+
+  .photo-container a {
+    margin-bottom: 40px;
+  }
+
+  .photo-container img {
+    max-width: 100%;
+  }
+
+}
+</style>
+<title>Mark Seeliger&#x27; Projects</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Mark Seeliger&#x27; Projects" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="&#x27;" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#550080">
+<meta name="Description" content="&#x27;v">
+</head>
+
+<body>
+
+<nav class="menu">
+  <ul>
+    <li><a href="/">about</a></li>
+    <li><a class="active" href="/projects.html">projects</a></li>
+  </ul>
+</nav>
+
+
+<section class="content">
+  <h1>Here's what I've built.</h1>
+  <p>
+    Below is a sampling of projects that I have built that I think are interesting.
+    For the full list of what I've built, visit my
+    <a href="https://github.com/mkslge/">GitHub profile</a>.
+  </p>
+
+  <div class="project-container">
+    <div class="project-title">RSSI Positioning System</div>
+    <div class="project-description">
+      <p>I'm currently working on developing a WiFi RSSI positioning system as part of my internship at NASA.
+        Which estimates your location by measuring the signal strength (RSSI) from nearby WiFi access points.
+         By comparing these signal strengths to known positions, using trilateration, you cancalculate your approximate location within
+        the network's coverage area.</p>
+    </div>
+    <div class="project-photo">
+      <img src="/static/nasa_photo1.jpg" alt="NASA Picture" width="600px">
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="project-title"><a href="https://github.com/mkslge/BlackjackSimulator">Blackjack Simulator</a></div>
+    <div class="project-description">
+      <p>A Java-based application I built to simulate playing Blackjack against a dealer.</p>
+      </div>
+    <div class="project-photo">
+      <img src="/static/blackjack2.png" alt="Blackjack Picture" width="600px">
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="project-title"><a href="=https://github.com/mkslge/ScamEvaluation">Scam Evaluation</a></div>
+    <div class="project-description">
+      <p>A paper Comparing the effectiveness of GPT-4 and Gemini in detecting and countering online scams targeting older adults.</p>
+    </div>
+    <div class="project-photo">
+      <img src="/static/scameval.png" alt="Paper Picture" width="600px">
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="project-title"><a href="=https://github.com/mkslge/MarchMadness">March Madness Model</a></div>
+    <div class="project-description">
+      <p>A predictive analytics project optimizing NCAA basketball brackets using data-driven methods.</p>
+    </div>
+    <div class="project-video">
+      
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="project-title"><a href="https://github.com/mkslge/Snake">Snake</a></div>
+    <div class="project-description">
+      <p>A modern take on the classic Snake game built with C++ and SDL, featuring sound effects and animations.</p>
+      </div>
+    <div class="project-photo">
+        <img src="/static/snake4.png" alt="Snake End Screen" width="600px">
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="project-title"><a href="https://github.com/mkslge/MazeSolver">Maze Solver</a></div>
+    <div class="project-description">
+      <p>A GUI that demonstrates DFS, BFS, and Dijkstra's algorithm for solving mazes, developed as part of CMSC132 coursework.</p>
+      </div>
+      <div class="project-photo">
+        <img src="/static/maze3.png" alt="Maze Picture" width="600px">
+      </div>
+  </div>
+
+  
+</section>
+
+<!--
+Icons from https://github.com/encharm/Font-Awesome-SVG-PNG, licensed under SIL OFL 1.1 (http://scripts.sil.org/OFL)
+-->
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-contact">
+      <a rel="noopener" target="_blank" href="https://github.com/mkslge">
+        <span class="screen-reader-text">GitHub profile</span>
+        <svg aria-hidden="true" width="22px" height="22px" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+          <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z" fill="#fff"/>
+        </svg>
+      </a>
+      <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/mark-seeliger-0a94a017b/">
+        <svg aria-hidden="true" width="22px" height="22px" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+          <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" fill="#fff"/>
+        </svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
