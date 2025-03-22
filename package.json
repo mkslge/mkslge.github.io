@@ -1,5 +1,5 @@
 {
-  "name": "nebrius.github.io",
+  "name": "mkslge.github.io",
   "version": "1.0.0",
   "description": "My personal website",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nebrius/nebrius.github.io.git"
+    "url": "git+https://github.com/mkslge/mkslge.github.io.git"
   },
-  "author": "Bryan Hughes <bryan@nebri.us>",
+  "author": "Mark Seeliger",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/nebrius/nebrius.github.io/issues"
+    "url": "https://github.com/mkslge/mkslge.github.io/issues"
   },
-  "homepage": "https://github.com/nebrius/nebrius.github.io#readme",
+  "homepage": "https://github.com/mkslge/mkslge.github.io#readme",
   "dependencies": {
     "cpy": "^11.0.1",
     "handlebars": "^4.7.7",
