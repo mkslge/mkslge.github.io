@@ -302,7 +302,24 @@ a {
 
 
 <section class="content">
-  <h1>Here's what I've built.</h1>
+  <h1 id="typing-effect"></h1>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const newline = "<br><br>"
+      let text = "Here's what I've built.";
+      text += newline;
+      const speed = 30;
+      let idx = 0;
+      function typeWriting() {
+        if(idx < text.length) {
+          document.getElementById("typing-effect").innerHTML = text.slice(0, idx);
+          idx++;
+          setTimeout(typeWriting, speed);
+        }
+      }
+      typeWriting();
+    });
+  </script>
   <p>
     Below is a sampling of projects that I have built that I think are interesting.
     For the full list of what I've built, visit my
