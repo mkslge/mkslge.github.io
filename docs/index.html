@@ -192,37 +192,39 @@ a {
 </nav>
 
 <section class="content">
-  <h1>I'm Mark.</h1>
+  <h1 id="typing-effect">Nice to meet you, I'm Mark.</h1>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const newline = "<br><br>"
+      let text = "Nice to meet you, I'm Mark.";
+      const speed = 20;
+      let idx = 0;
+      function typeWriting() {
+        if(idx < text.length) {
+          document.getElementById("typing-effect").innerHTML = text.slice(0, idx);
+          idx++;
+          setTimeout(typeWriting, speed);
+        }
+      }
+      typeWriting();
+    });
+  </script>
   <div class="about">
     <div class="about-content">
-      <p id="typing-effect">
-        
+      <p>
+        A junior studying Computer Science, and minoring in Human Development at the <a href='https://umd.edu/'>University Of Maryland</a>
+        and a current Software Engineer Intern at <a href='https://nasa.gov/'>NASA</a>.
       </p>
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const newline = "<br><br>"
-          let text = "A junior studying majoring in Computer Science, and minoring in Human Development at the <a href='https://umd.edu/'>University Of Maryland</a>";
-          text += " and a current Software Engineer Intern at <a href='https://nasa.gov/'>NASA</a>.";
-          
-          text += newline;
-          text += "At NASA, I'm working on developing an RSSI (Received Signal Strength Indicator) positioning system using C.";
-          text += "The project involves creating a reliable method for determining the location of devices based on the strength of their Wi-Fi signals.";
-          text += "It's a super exciting challenge that blends my skills in software development and my interest in solving real-world problems with technology.";
-          text += newline;
-          text += "Outside of my tech pursuits, I'm all about staying active.";
-          text += "You'll find me in the gym, playing basketball, getting into a heated game of table tennis, or exploring nature on a hike.";
-          const speed = 10;
-          let idx = 0;
-          function typeWriting() {
-            if(idx < text.length) {
-              document.getElementById("typing-effect").innerHTML = text.slice(0, idx);
-              idx++;
-              setTimeout(typeWriting, speed);
-            }
-          }
-          typeWriting();
-        });
-      </script>
+      <p>
+        At NASA, I'm working on developing an RSSI (Received Signal Strength Indicator) positioning system using C.
+        The project involves creating a reliable method for determining the location of devices based on the strength of their Wi-Fi signals.
+        It's a super exciting challenge that blends my skills in software development and my interest in solving real-world problems with technology.
+      </p>
+      <p>
+        Outside of my tech pursuits, I'm all about staying active.
+        You'll find me in the gym, playing basketball, getting into a heated game of table tennis, or exploring nature on a hike.
+      </p>
+      
       
       
     </div>
