@@ -81,6 +81,8 @@ a {
   font-weight: 500;
 }
 
+
+
 .content {
   font-weight: 300;
   font-size: 18pt;
@@ -282,6 +284,7 @@ a {
 </style>
 <title>Mark Seeliger&#x27; Projects</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Mark Seeliger&#x27; Projects" />
 <meta property="og:type" content="website" />
@@ -324,69 +327,86 @@ a {
     For the full list of what I've built, visit my
     <a href="https://github.com/mkslge/">GitHub profile</a>.
   </p>
+  <br>
 
-  <div class="project-container">
-    <div class="project-title">RSSI Positioning System</div>
-    <div class="project-description">
-      <p>I'm currently working on developing a WiFi RSSI positioning system as part of my internship at NASA.
-        Which estimates your location by measuring the signal strength (RSSI) from nearby WiFi access points.
-         By comparing these signal strengths to known positions, using trilateration, you can calculate your approximate location within
-        the network's coverage area.</p>
-    </div>
-    <div class="project-photo">
-      <img src="/static/nasa_photo1.jpg" alt="NASA Picture" width="600px">
-    </div>
-  </div>
+  <section class="mb-12" id="my-projects">
+    
+    
 
-  <div class="project-container">
-    <div class="project-title"><a href="https://github.com/mkslge/BlackjackSimulator">Blackjack Simulator</a></div>
-    <div class="project-description">
-      <p>A Java-based application I built to simulate playing Blackjack against a dealer.</p>
-      </div>
-    <div class="project-photo">
-      <img src="/static/blackjack2.png" alt="Blackjack Picture" width="600px">
-    </div>
-  </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Blackjack Project -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/BlackjackSimulator" target="_blank">
+                <img src="/static/blackjack3.png" alt="Blackjack Picture" class="w-full h-60 object-cover rounded-tlg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Blackjack Simulator</h3>
+                <p class="text-gray-700 text-sm">
+                    A Java-based application simulating Blackjack against a dealer with an intuitive Java Swing interface.
+                </p>
+            </div>
+        </div>
 
-  <div class="project-container">
-    <div class="project-title"><a href="=https://github.com/mkslge/ScamEvaluation">Scam Evaluation</a></div>
-    <div class="project-description">
-      <p>A paper Comparing the effectiveness of GPT-4 and Gemini in detecting and countering online scams targeting older adults.</p>
-    </div>
-    <div class="project-photo">
-      <img src="/static/scameval.png" alt="Paper Picture" width="600px">
-    </div>
-  </div>
+        <!-- March Madness Model -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/MarchMadness" target="_blank">
+                <img src="/static/marchmadness.png" alt="March Madness Logo" class="w-full h-60 object-cover rounded-tlg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">March Madness Model</h3>
+                <p class="text-gray-700 text-sm">
+                    A predictive analytics project optimizing NCAA basketball brackets using data-driven methods.
+                </p>
+            </div>
+        </div>
 
-  <div class="project-container">
-    <div class="project-title"><a href="=https://github.com/mkslge/MarchMadness">March Madness Model</a></div>
-    <div class="project-description">
-      <p>A predictive analytics project optimizing NCAA basketball brackets using data-driven methods.</p>
-    </div>
-    <div class="project-video">
-      
-    </div>
-  </div>
+        <!-- Evaluating Scams -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/ScamEvaluation" target="_blank">
+                <img src="/static/scamevaltitle.png" alt="Academic Paper First Page" class="w-full h-60 object-cover rounded-tlg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Evaluating Scams</h3>
+                <p class="text-gray-700 text-sm">
+                    A study comparing GPT-4.0 and Gemini-1.5-Pro in detecting email scams, achieving an 87% accuracy rate.
+                </p>
+            </div>
+        </div>
 
-  <div class="project-container">
-    <div class="project-title"><a href="https://github.com/mkslge/Snake">Snake</a></div>
-    <div class="project-description">
-      <p>A modern take on the classic Snake game built with C++ and SDL, featuring sound effects and animations.</p>
-      </div>
-    <div class="project-photo">
-        <img src="/static/snake4.png" alt="Snake End Screen" width="600px">
-    </div>
-  </div>
+        <!-- Snake Game -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/Snake" target="_blank">
+                <img src="/static/snake2.png" alt="Snake Picture" class="w-full h-60 object-cover rounded-t-lg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Snake Game</h3>
+                <p class="text-gray-700 text-sm">
+                    A modern take on the classic Snake game built with C++ and SDL, featuring sound effects and animations.
+                </p>
+            </div>
+        </div>
 
-  <div class="project-container">
-    <div class="project-title"><a href="https://github.com/mkslge/MazeSolver">Maze Solver</a></div>
-    <div class="project-description">
-      <p>A GUI that demonstrates DFS, BFS, and Dijkstra's algorithm for solving mazes, developed as part of CMSC132 coursework.</p>
-      </div>
-      <div class="project-photo">
-        <img src="/static/maze3.png" alt="Maze Picture" width="600px">
-      </div>
-  </div>
+        <!-- Maze Solver -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/MazeSolver" target="_blank">
+                <img src="/static/maze3.png" alt="Maze Picture" class="w-full h-60 object-cover rounded-t-lg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Maze Solver</h3>
+                <p class="text-gray-700 text-sm">
+                    Demonstrates DFS, BFS, and Dijkstra's algorithm for solving mazes, developed as part of CMSC132 coursework.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+  
 
   
 </section>
