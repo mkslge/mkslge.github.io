@@ -313,7 +313,7 @@ a {
       const speed = 20;
       let idx = 0;
       function typeWriting() {
-        if(idx < text.length) {
+        if(idx <= text.length) {
           document.getElementById("typing-effect").innerHTML = text.slice(0, idx);
           idx++;
           setTimeout(typeWriting, speed);
