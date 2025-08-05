@@ -238,7 +238,9 @@ a {
     </div>
     <div class="about-image">
       
-      <img src="" alt="My profile photo" id="cover-image" />
+      <img src="" alt="My profile photo" id="cover-image" 
+      class="transition-all duration-700 ease-in-out blur-sm opacity-0"
+      onload="this.classList.remove('blur-sm', 'opacity-0')"/>
 
       <script>
         const prefix="/static/coverphotos/";
