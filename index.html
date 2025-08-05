@@ -236,24 +236,54 @@ a {
       
       
     </div>
-    <div class="about-image">
-      
-      <img src="" alt="My profile photo" id="cover-image" 
-      class="transition-all duration-700 ease-in-out blur-sm opacity-0"
-      onload="this.classList.remove('blur-sm', 'opacity-0')"/>
-
-      <script>
-        const prefix="/static/coverphotos/";
-        const imageArray = ["mark_providence_photo.jpg", "mark_bern_photo.jpg", "mark_acadia_photo.jpg"]
-        let length = imageArray.length;
-
-        let randomIndex = Math.floor(Math.random() * (length - 0)) + 0;
-
-        let imageElement = document.getElementById("cover-image");
-        imageElement.src = prefix + imageArray[randomIndex];
-      </script>
-
+    <div class="about-image max-w-md mx-auto">
+        <img src="" alt="My profile photo" id="cover-image" 
+             class="w-full h-128 object-cover rounded-lg transition-all duration-500 ease-in-out opacity-0"/>
     </div>
+
+    <script>
+        const prefix = "/static/coverphotos/";
+        const imageArray = ["mark_acadia_photo.jpg", "mark_providence_photo.jpg", "mark_bern_photo.jpg"];
+        const length = imageArray.length;
+        const imageElement = document.getElementById("cover-image");
+        
+        let index = 0;
+
+        function changeImage() {
+            //fade out the current image
+            imageElement.style.opacity = '0';
+            
+            //after the fade out completes, change the image
+            setTimeout(() => {
+                imageElement.src = prefix + imageArray[index];
+                index = (index + 1) % length;
+                
+                //preloading the image to avoid any flicker
+                const img = new Image();
+                img.onload = () => {
+                    //once its loaded fade it in
+                    imageElement.style.opacity = '1';
+                };
+                img.src = imageElement.src;
+                
+            }, 500); 
+        }
+
+        //initialize with first image
+        function initializeSlideshow() {
+            imageElement.src = prefix + imageArray[index];
+            index = (index + 1) % length;
+            
+            //fade in the first image once it loads
+            imageElement.onload = () => {
+                imageElement.style.opacity = '1';
+            };
+        }
+
+        
+        initializeSlideshow();
+        setInterval(changeImage, 3000);
+    </script>
 </section>
 
 <!--
