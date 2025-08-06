@@ -123,7 +123,20 @@ a {
   color: lightgray;
 }
 
-/* About specific classes */
+.about-image {
+  aspect-ratio: 3 / 4; 
+  width: 100%; 
+  max-width: 400px;  
+  overflow: hidden;    
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
 
 @media (max-width: 1200px) {
 
@@ -234,11 +247,12 @@ a {
       </p>
       
       
-      
+
     </div>
-    <div class="about-image max-w-md mx-auto">
-        <img src="" alt="My profile photo" id="cover-image" 
-             class="w-full h-128 object-cover rounded-lg transition-all duration-500 ease-in-out opacity-0"/>
+    <div class="about-image max-w-md mx-auto aspect-[3/4]"> 
+    <!-- aspect-[3/4] keeps 3:4 ratio; adjust as needed -->
+      <img src="" alt="My profile photo" id="cover-image" 
+          class="w-full h-full object-cover rounded-lg transition-all duration-500 ease-in-out opacity-0"/>
     </div>
 
     <script>
