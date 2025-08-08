@@ -294,6 +294,15 @@ a {
 <meta name="Description" content="&#x27;v">
 </head>
 
+
+
+<script>
+  window.addEventListener("load", () => {
+    const section = document.getElementById("my-projects");
+    section.classList.remove("opacity-0", "translate-y-5");
+    section.classList.add("opacity-100", "translate-y-0");
+  });
+</script>
 <body>
 
 <nav class="menu">
@@ -330,10 +339,7 @@ a {
     <a href="https://github.com/mkslge/">GitHub profile</a>.
   </p>
   <br>
-
-  <section class="mb-12" id="my-projects">
-    
-    
+<section class="reveal mb-12 opacity-0 translate-y-5 transition-all duration-700 ease-in-out" id="my-projects">
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Blackjack Project -->
