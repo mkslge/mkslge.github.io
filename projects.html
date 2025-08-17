@@ -297,7 +297,7 @@ a {
 
 
 <script>
-  addEventListener("load", () => {
+  window.addEventListener("load", () => {
     const section = document.getElementById("my-projects");
     section.classList.remove("opacity-0", "translate-y-5");
     section.classList.add("opacity-100", "translate-y-0");
@@ -308,8 +308,8 @@ a {
 <nav class="menu">
   <ul>
     <li><a href="/" id="main">about</a></li>
-    <li><a  href="/projects.html" id="projects">projects</a></li>
-    <li><a class="active" id="projects">experience</a></li>
+    <li><a class="active" href="/projects.html">projects</a></li>
+    <li><a href="/experience.html" id="experience">experience</a></li>
   </ul>
 </nav>
 
@@ -319,7 +319,7 @@ a {
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const newline = "<br><br>"
-      let text = "Here's where I've worked.";
+      let text = "Here's what I've built.";
       const speed = 20;
       let idx = 0;
       function typeWriting() {
@@ -334,42 +334,122 @@ a {
   </script>
   <br>
   <p>
-    For more info connect with me on my
-    <a href="https://www.linkedin.com/in/mark-seeliger-0a94a017b/">LinkedIn profile</a>.
+    Below is a sampling of projects that I have built that I think are interesting.
+    For the full list of what I've built, visit my
+    <a href="https://github.com/mkslge/">GitHub profile</a>.
   </p>
   <br>
-
-  <section class="reveal mb-12 opacity-0 translate-y-5 transition-all duration-700 ease-in-out" id="my-projects">
-    
-    
+<section class="reveal mb-12 opacity-0 translate-y-5 transition-all duration-700 ease-in-out" id="my-projects">
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- NASA Internship -->
+        <!-- Blackjack Project -->
         <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="/static/internships/nasa-alt-logo.jpg" alt="NASA Logo" class="w-full h-60 object-cover rounded-tlg">
+            <a href="https://github.com/mkslge/BlackjackSimulator" target="_blank" id="blackjack">
+                <img src="/static/blackjack3.png" alt="Blackjack Picture" class="w-full h-60 object-cover rounded-tlg">
             </a>
             <div class="p-4">
-                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">NASA</h3>
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Blackjack Simulator</h3>
                 <p class="text-gray-700 text-sm">
-                    From January to May 2025 I interned at NASA as a software engineer, where I worked on indoor positioning software.
+                    A Java-based application simulating Blackjack against a dealer with an intuitive Java Swing interface.
                 </p>
             </div>
         </div>
 
-        <!-- Textron Internship -->
+        <!-- March Madness Model -->
         <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="/static/internships/textron-alt-logo.jpg" alt="Textron Logo" class="w-full h-60 object-cover rounded-tlg">
+            <a href="https://github.com/mkslge/MarchMadness" target="_blank" id ="marchmadness">
+                <img src="/static/march-madness-model-results.png" alt="March Madness Logo" class="w-full h-60 object-cover rounded-tlg">
             </a>
             <div class="p-4">
-                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Textron</h3>
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">March Madness Model</h3>
                 <p class="text-gray-700 text-sm">
-                    From June to August 2025, I am interned at Textron, where I worked as a software engineer,
-                    developing internal tools on the Custom Dev & Analytics Team.
+                    A predictive analytics project optimizing NCAA basketball brackets using data-driven methods.
                 </p>
             </div>
         </div>
 
-        
+        <!-- Evaluating Scams -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/ScamEvaluation" target="_blank" id="scam">
+                <img src="/static/scamevaltitle.png" alt="Academic Paper First Page" class="w-full h-60 object-cover rounded-tlg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Evaluating Scams</h3>
+                <p class="text-gray-700 text-sm">
+                    A study comparing GPT-4.0 and Gemini-1.5-Pro in detecting email scams, achieving an 87% accuracy rate.
+                </p>
+            </div>
+        </div>
+
+        <!-- Snake Game -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/Snake" target="_blank" id="snake">
+                <img src="/static/snake2.png" alt="Snake Picture" class="w-full h-60 object-cover rounded-t-lg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Snake Game</h3>
+                <p class="text-gray-700 text-sm">
+                    A modern take on the classic Snake game built with C++ and SDL, featuring sound effects and animations.
+                </p>
+            </div>
+        </div>
+
+        <!-- Maze Solver -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/MazeSolver" target="_blank" id="maze">
+                <img src="/static/maze3.png" alt="Maze Picture" class="w-full h-60 object-cover rounded-t-lg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Maze Solver</h3>
+                <p class="text-gray-700 text-sm">
+                    Demonstrates DFS, BFS, and Dijkstra's algorithm for solving mazes, developed as part of CMSC132 coursework.
+                </p>
+            </div>
+        </div>
+
+        <!-- Unix Shell -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/Unix-Shell" target="_blank" id="shell">
+                <img src="/static/unix-shell/unix-shell.png" alt="Unix Picture" class="w-full h-60 object-cover rounded-t-lg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Unix Shell</h3>
+                <p class="text-gray-700 text-sm">
+                    Implemented Unix Shell from scratch, supporting common Unix shell features such as piping, redirection, logical chaining, and subshell execution.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- OCaml Interpreter -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/OCaml-Interpreter" target="_blank" id="interpreter">
+                <img src="/static/interpreter/ocaml-interpreter.png" alt="OCaml Picture" class="w-full h-60 object-cover rounded-t-lg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Interpreter</h3>
+                <p class="text-gray-700 text-sm">
+                    Built an Interpreter and an REPL (interactive toplevel) tool for a dynamically typed version of OCaml.
+                </p>
+            </div>
+        </div>
+
+        <!-- Rust Garbage Collection System -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <a href="https://github.com/mkslge/Rust-Garbage-Collection" target="_blank" id="garbage">
+                <img src="/static/garbage-collection/i-6.png" alt="OCaml Picture" class="w-full h-60 object-cover rounded-t-lg">
+            </a>
+            <div class="p-4">
+                <h3 class="text-2xl font-semibold text-black-600 mb-2 underline hover:text-gray-700">Garbage Collector</h3>
+                <p class="text-gray-700 text-sm">
+                    Developed reference counting, mark and sweep, as well as stop and copy implementations in Rust.
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
 </section>
 
 
