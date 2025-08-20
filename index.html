@@ -24,7 +24,7 @@ a {
   border-bottom: 1px solid hsl(0, 72%, 42%);
 }
 
-/* Borrowed from https://haltersweb.github.io/Accessibility/svg.html */
+/* Borrowed from https://haltersweb.github.io/Accessibility/svg.html THIS IS THE FORK*/
 .screen-reader-text { /* Hide only visually, but have it available for screenreaders */
   position: absolute !important;
   display: block;
@@ -178,6 +178,10 @@ a {
     max-width: 100%;
   }
 
+  .abtheader {
+    width: 120px;
+  }
+
 }
 
 /* Talk specific classes */
@@ -200,9 +204,11 @@ a {
 <body>
 
 <nav class="menu">
-  <ul>
-    <li><a class="active" href="/">about</a></li>
+  <ul class="flex space-x-6">
+    <li><a class="active" href="/" id="abtheader">about</a></li>
+
     <li><a href="/projects.html" id="projects">projects</a></li>
+
     <li><a href="/experience.html" id="experience">experience</a></li>
   </ul>
 </nav>
