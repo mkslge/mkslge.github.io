@@ -20,7 +20,9 @@
   "homepage": "https://github.com/mkslge/mkslge.github.io#readme",
   "dependencies": {
     "cpy": "^11.0.1",
-    "handlebars": "^4.7.7",
-    "http-server": "^14.0.0"
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
