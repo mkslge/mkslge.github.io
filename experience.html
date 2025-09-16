@@ -18,6 +18,19 @@ body {
   right: 0;
 }
 
+/*NEXT TWO CLASSES DISABLE SCROLLBAR FROM APPEARING*/
+html, body {
+  overflow-y: scroll;           
+  -ms-overflow-style: none;     
+  scrollbar-width: none;        
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -306,7 +319,7 @@ a {
 <body>
 
 <nav class="menu">
-  <ul class="flex space-x-6">
+  <ul>
     <li><a href="/" id="main">about</a></li>
     <li><a  href="/projects.html" id="projects">projects</a></li>
     <li><a class="active" id="projects">experience</a></li>

@@ -18,6 +18,19 @@ body {
   right: 0;
 }
 
+/*NEXT TWO CLASSES DISABLE SCROLLBAR FROM APPEARING*/
+html, body {
+  overflow-y: scroll;           
+  -ms-overflow-style: none;     
+  scrollbar-width: none;        
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 a {
   color: black;
   text-decoration: none;
