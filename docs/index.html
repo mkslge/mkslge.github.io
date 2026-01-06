@@ -205,6 +205,7 @@ a {
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Mark Seeliger&#x27; Website" />
 <meta property="og:type" content="website" />
@@ -212,6 +213,7 @@ a {
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#ffffff">
 <meta name="Description" content="I&#x27;m Mark.">
+<script src="scripts.js"></script>
 </head>
 
 <body>
@@ -228,21 +230,10 @@ a {
 
 <section class="content">
   <h1 id="typing-effect" class="text-4xl font-extrabold tracking-tight"></h1>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const newline = "<br><br>"
-      let text = "Nice to meet you, I'm Mark.";
-      const speed = 20;
-      let idx = 0;
-      function typeWriting() {
-        if(idx <= text.length) {
-          document.getElementById("typing-effect").innerHTML = text.slice(0, idx);
-          idx++;
-          setTimeout(typeWriting, speed);
-        }
-      }
-      typeWriting();
-    });
+  
+  <script >
+
+      loadHeader("Nice to meet you, I'm Mark :-)");
   </script>
 
   
@@ -252,24 +243,18 @@ a {
     <div class="about-content">
       <p>
         A junior studying Computer Science, and minoring in Statistics and Human Development at the <a href='https://umd.edu/'>University Of Maryland</a>.
-        I previously interned at <a href='https://nasa.gov/'>NASA</a> and <a href="https://textron.com/">Textron</a>.
+        I've previously interned at <a href='https://nasa.gov/'>NASA</a> and <a href="https://textron.com/">Textron</a>.
       </p>
       <br>
+      
       <p>
-        At NASA, I worked on developing an RSSI (Received Signal Strength Indicator) positioning system using C.
-        The project involves creating a reliable method for determining the location of devices based on the strength of their Wi-Fi signals.
-        
-      </p>
-      <br>
-      <p>
-        Outside of my tech pursuits, I love playing basketball, table-tennis, hiking, and reading.
+        Outside of school and technology, I love playing basketball, table-tennis, hiking, and reading.
       </p>
       
       
 
     </div>
     <div class="about-image max-w-md mx-auto aspect-[3/4]"> 
-    <!-- aspect-[3/4] keeps 3:4 ratio; adjust as needed -->
       <img src="" alt="My profile photo" id="cover-image" 
           class="w-full h-full object-cover rounded-lg transition-all duration-500 ease-in-out opacity-0"/>
     </div>
