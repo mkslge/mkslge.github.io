@@ -320,18 +320,14 @@ a {
 
 
 <script>
-  addEventListener("load", () => {
-    const section = document.getElementById("my-projects");
-    section.classList.remove("opacity-0", "translate-y-5");
-    section.classList.add("opacity-100", "translate-y-0");
-  });
+  animateLoading("my-experience");
 </script>
 <body>
 
 <nav class="menu">
   <ul>
     <li><a href="/" id="main">about</a></li>
-    <li><a  href="/projects.html" id="projects">projects</a></li>
+    <li><a  href="/projects" id="projects">projects</a></li>
     <li><a class="active" id="projects">experience</a></li>
   </ul>
 </nav>
@@ -349,7 +345,7 @@ a {
   </p>
   <br>
 
-  <section class="reveal mb-12 opacity-0 translate-y-5 transition-all duration-700 ease-in-out" id="my-projects">
+  <section class="reveal mb-12 opacity-0 translate-y-5 transition-all duration-700 ease-in-out" id="my-experience">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white shadow-lg rounded-lg overflow-hidden transform">
@@ -402,25 +398,8 @@ a {
                     From January to May 2025 I interned at NASA as a software engineer, where I worked on indoor positioning software.
                 </p>
             </div>
-        </div>
-    
-
-        
-
-        
-
-        
-
-        
-</section>
-
-
-
-
-
-
-  
-
+        </div>  
+  </section>
   
 </section>
 

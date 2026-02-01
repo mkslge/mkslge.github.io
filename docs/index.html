@@ -72,9 +72,6 @@ a {
   padding-right: 8px;
 }
 
-.menu li {
-  border-bottom: 1px solid white;
-}
 
 .menu a {
   display: block;
@@ -95,11 +92,12 @@ a {
 }
 
 .content {
+  flex-grow: 1;
   font-weight: 300;
   font-size: 18pt;
-  padding: 30px;
-  padding: 0 10%;
-  flex-grow: 1;
+  padding: 2.5rem 10%;
+  
+  
 }
 
 .footer {
@@ -151,6 +149,13 @@ a {
 }
 
 
+
+
+
+
+
+
+
 @media (max-width: 1200px) {
 
   .about {
@@ -173,11 +178,12 @@ a {
   .about {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: top;
   }
 
   .about-content {
-    flex-grow: 2;
+    padding-top: 1%;
+    flex-grow: 1;
     flex-basis: 0;
     margin-right: 10%;
   }
@@ -194,6 +200,8 @@ a {
   .abtheader {
     width: 120px;
   }
+
+  
 
 }
 
@@ -222,23 +230,21 @@ a {
   <ul class="flex space-x-6">
     <li><a class="active" href="/" id="abtheader">about</a></li>
 
-    <li><a href="/projects.html" id="projects">projects</a></li>
+    <li><a href="/projects" id="projects">projects</a></li>
 
-    <li><a href="/experience.html" id="experience">experience</a></li>
+    <li><a href="/experience" id="experience">experience</a></li>
   </ul>
 </nav>
 
 <section class="content">
-  <h1 id="typing-effect" class="text-4xl font-extrabold tracking-tight"></h1>
-  
+  <h1
+  id="typing-effect"
+  class="text-4xl font-extrabold tracking-tight mb-4 mt-0"
+></h1>
   <script >
-
       loadHeader("Nice to meet you, I'm Mark :-)");
   </script>
 
-  
-
-  <br>
   <div class="about">
     <div class="about-content">
       <p>
@@ -246,62 +252,20 @@ a {
         I've previously interned at <a href='https://nasa.gov/'>NASA</a> and <a href="https://textron.com/">Textron</a>.
       </p>
       <br>
-      
       <p>
         Outside of school and technology, I love playing basketball, table-tennis, hiking, and reading.
       </p>
-      
-      
-
     </div>
-    <div class="about-image max-w-md mx-auto aspect-[3/4]"> 
-      <img src="" alt="My profile photo" id="cover-image" 
-          class="w-full h-full object-cover rounded-lg transition-all duration-500 ease-in-out opacity-0"/>
+  
+      <div class="about-image max-w-md mx-auto aspect-[3/4]"> 
+        <img src="" alt="My profile photo" id="cover-image" 
+            class="w-full h-full object-cover rounded-lg transition-all duration-500 ease-in-out opacity-0"/>
+      </div>
+    
+      <script>
+          animateSlideshow();
+      </script>
     </div>
-
-    <script>
-        const prefix = "/static/coverphotos/";
-        const imageArray = ["mark_acadia_photo.jpg", "mark_providence_photo.jpg", "mark_bern_photo.jpg"];
-        const length = imageArray.length;
-        const imageElement = document.getElementById("cover-image");
-        
-        let index = 0;
-
-        function changeImage() {
-            //fade out the current image
-            imageElement.style.opacity = '0';
-            
-            //after the fade out completes, change the image
-            setTimeout(() => {
-                imageElement.src = prefix + imageArray[index];
-                index = (index + 1) % length;
-                
-                //preloading the image to avoid any flicker
-                const img = new Image();
-                img.onload = () => {
-                    //once its loaded fade it in
-                    imageElement.style.opacity = '1';
-                };
-                img.src = imageElement.src;
-                
-            }, 500); 
-        }
-
-        //initialize with first image
-        function initializeSlideshow() {
-            imageElement.src = prefix + imageArray[index];
-            index = (index + 1) % length;
-            
-            //fade in the first image once it loads
-            imageElement.onload = () => {
-                imageElement.style.opacity = '1';
-            };
-        }
-
-        
-        initializeSlideshow();
-        setInterval(changeImage, 3000);
-    </script>
 </section>
 
 <!--
