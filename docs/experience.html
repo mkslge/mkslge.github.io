@@ -318,9 +318,12 @@ a {
 </head>
 
 
-
 <script>
-  animateLoading("my-experience");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      animateLoading("my-experience");
+    });
+
 </script>
 <body>
 
@@ -336,7 +339,9 @@ a {
 <section class="content">
   <h1 id="typing-effect" class="text-4xl font-extrabold tracking-tight">Here's what I've built.</h1>
   <script>
-    loadHeader("Here's where I've worked.")
+    document.addEventListener("DOMContentLoaded", () => {
+      loadHeader("Here's where I've worked.");
+    });
   </script>
   <br>
   <p>

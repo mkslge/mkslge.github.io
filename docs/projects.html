@@ -332,8 +332,11 @@ a {
 
 <section class="content">
   <h1 id="typing-effect" class="text-4xl font-extrabold tracking-tight">Here's what I've built.</h1>
+
   <script>
-    loadHeader("Here's what I've built.");
+    document.addEventListener("DOMContentLoaded", () => {
+      loadHeader("Here's what I've built.");
+    });
   </script>
   <br>
   <p>
@@ -489,7 +492,11 @@ Icons from https://github.com/encharm/Font-Awesome-SVG-PNG, licensed under SIL O
 </footer>
 
 <script>
-  animateLoading("my-projects");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      animateLoading("my-projects");
+    });
+
 </script>
 
 </body>
