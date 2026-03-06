@@ -60,7 +60,7 @@ function animateSlideshow() {
 
         
         initializeSlideshow();
-        setInterval(changeImage, 3000);
+        setInterval(changeImage, 60000);
 }
 
 function animateLoading(div) {
