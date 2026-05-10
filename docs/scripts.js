@@ -21,7 +21,7 @@ function loadHeader(text, speed = DEFAULT_SPEED) {
 
 function animateSlideshow() {
     const prefix = "/static/coverphotos/";
-        const imageArray = ["mark_acadia_photo.jpg", "mark_providence_photo.jpg", "mark_bern_photo.jpg"];
+        const imageArray = ["mark_providence_photo.jpg", "mark_acadia_photo.jpg",  "mark_bern_photo.jpg"];
         const length = imageArray.length;
         const imageElement = document.getElementById("cover-image");
         

@@ -1,0 +1,25 @@
+<svg width="900" height="540" viewBox="0 0 900 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="540" fill="#edf2f7"/>
+  <rect x="70" y="58" width="760" height="424" rx="18" fill="#0f172a"/>
+  <rect x="70" y="58" width="760" height="44" rx="18" fill="#334155"/>
+  <circle cx="104" cy="80" r="7" fill="#ef4444"/>
+  <circle cx="128" cy="80" r="7" fill="#f59e0b"/>
+  <circle cx="152" cy="80" r="7" fill="#22c55e"/>
+  <text x="450" y="87" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="15" fill="#cbd5e1">ThreadPoolWS - work stealing demo</text>
+  <text x="110" y="142" font-family="Menlo, Consolas, monospace" font-size="21" fill="#e2e8f0">$ ./ThreadPoolWS</text>
+  <text x="110" y="183" font-family="Menlo, Consolas, monospace" font-size="21" fill="#fca5a5">single-threaded approach</text>
+  <text x="110" y="216" font-family="Menlo, Consolas, monospace" font-size="21" fill="#cbd5e1">Started task ID: 0   Ended task ID: 0</text>
+  <text x="110" y="249" font-family="Menlo, Consolas, monospace" font-size="21" fill="#cbd5e1">Started task ID: 1   Ended task ID: 1</text>
+  <text x="110" y="282" font-family="Menlo, Consolas, monospace" font-size="21" fill="#cbd5e1">Time taken: 30.0486 seconds</text>
+  <text x="110" y="329" font-family="Menlo, Consolas, monospace" font-size="21" fill="#86efac">work-stealing thread pool</text>
+  <text x="110" y="362" font-family="Menlo, Consolas, monospace" font-size="21" fill="#93c5fd">worker-1 stole task 7 from worker-4</text>
+  <text x="110" y="395" font-family="Menlo, Consolas, monospace" font-size="21" fill="#93c5fd">worker-3 completed task 9</text>
+  <text x="110" y="428" font-family="Menlo, Consolas, monospace" font-size="21" fill="#e2e8f0">Time taken: 6.00654 seconds</text>
+  <rect x="566" y="154" width="186" height="264" rx="12" fill="#111827" stroke="#475569" stroke-width="2"/>
+  <text x="592" y="198" font-family="Menlo, Consolas, monospace" font-size="17" fill="#e2e8f0">workers</text>
+  <rect x="592" y="224" width="134" height="15" rx="7.5" fill="#60a5fa"/>
+  <rect x="592" y="257" width="94" height="15" rx="7.5" fill="#34d399"/>
+  <rect x="592" y="290" width="119" height="15" rx="7.5" fill="#60a5fa"/>
+  <rect x="592" y="323" width="76" height="15" rx="7.5" fill="#34d399"/>
+  <rect x="592" y="356" width="124" height="15" rx="7.5" fill="#60a5fa"/>
+</svg>

@@ -1,0 +1,132 @@
+:root {
+  --site-bg: #ffffff;
+  --site-fg: #111111;
+  --site-accent: #111111;
+  --site-muted: #666666;
+  --site-inverse: #ffffff;
+  --site-surface: #1f1f1f;
+}
+
+body {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: var(--site-bg);
+  color: var(--site-fg);
+}
+
+html,
+body {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+a {
+  color: var(--site-fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--site-accent);
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  display: block;
+  visibility: visible;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0px, 0px, 0px, 0px);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  white-space: nowrap;
+}
+
+.menu {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--site-surface);
+}
+
+.menu ul {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.menu li {
+  list-style: none;
+  text-align: right;
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.menu a {
+  display: block;
+  font-size: 22pt;
+  font-weight: 300;
+  width: 100%;
+  color: var(--site-inverse);
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.menu a:hover {
+  border-bottom: 1px solid var(--site-inverse);
+}
+
+.menu .active {
+  font-weight: 500;
+  border-bottom: 1px solid var(--site-inverse);
+}
+
+.content {
+  flex-grow: 1;
+  font-weight: 300;
+  font-size: 18pt;
+}
+
+.footer {
+  background-color: var(--site-surface);
+  color: var(--site-inverse);
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.footer a {
+  margin: 5px;
+  color: var(--site-inverse);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.footer a:hover,
+.footer span {
+  color: #d4d4d4;
+}
