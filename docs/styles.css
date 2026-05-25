@@ -9,7 +9,7 @@
 
 body {
   position: absolute;
-  font-family: 'Roboto', sans-serif;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   display: flex;
   flex-direction: column;
   min-height: 100%;

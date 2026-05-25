@@ -6,19 +6,19 @@
   <circle cx="128" cy="73" r="7" fill="#f59e0b"/>
   <circle cx="152" cy="73" r="7" fill="#22c55e"/>
   <rect x="204" y="61" width="514" height="24" rx="12" fill="#e5e7eb"/>
-  <text x="461" y="79" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="14" fill="#4b5563">localhost:8080</text>
+  <text x="461" y="79" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="14" fill="#4b5563">localhost:8080</text>
   <rect x="280" y="126" width="340" height="316" rx="24" fill="#ffffff" filter="url(#shadow)"/>
-  <text x="450" y="177" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="29" font-weight="700" fill="#111827">URL Tool</text>
+  <text x="450" y="177" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="29" font-weight="700" fill="#111827">URL Tool</text>
   <rect x="320" y="205" width="130" height="44" rx="12" fill="#3b82f6"/>
-  <text x="385" y="234" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Shorten URL</text>
+  <text x="385" y="234" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="16" font-weight="700" fill="#ffffff">Shorten URL</text>
   <rect x="450" y="205" width="130" height="44" rx="12" fill="#e5e7eb"/>
-  <text x="515" y="234" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="700" fill="#374151">Analytics</text>
-  <text x="320" y="286" font-family="Roboto, Arial, sans-serif" font-size="18" font-weight="500" fill="#111827">Enter URL</text>
+  <text x="515" y="234" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="16" font-weight="700" fill="#374151">Analytics</text>
+  <text x="320" y="286" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="18" font-weight="500" fill="#111827">Enter URL</text>
   <rect x="320" y="304" width="260" height="44" rx="7" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
-  <text x="338" y="332" font-family="Roboto, Arial, sans-serif" font-size="16" fill="#9ca3af">https://example.com</text>
+  <text x="338" y="332" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="16" fill="#9ca3af">https://example.com</text>
   <rect x="320" y="370" width="260" height="44" rx="8" fill="#3b82f6"/>
-  <text x="450" y="399" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Shorten</text>
-  <text x="320" y="441" font-family="Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#16a34a">Shortened URL: /l/a7K9</text>
+  <text x="450" y="399" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="17" font-weight="700" fill="#ffffff">Shorten</text>
+  <text x="320" y="441" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="15" font-weight="700" fill="#16a34a">Shortened URL: /l/a7K9</text>
   <defs>
     <filter id="shadow" x="250" y="104" width="400" height="376" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.16"/>
